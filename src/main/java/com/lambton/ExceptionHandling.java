@@ -6,6 +6,9 @@ public class ExceptionHandling
     public static void main(String[] ar)
     {
         Scanner sc=new Scanner(System.in);
+        StudentClass s1=new StudentClass();
+        System.out.println(s1.id());
+        System.out.println(s1.NAMe());
 
         int a;
         System.out.println("Enter A");
@@ -17,7 +20,7 @@ public class ExceptionHandling
         int c;
         System.out.println("Start");
         try {
-            x[4]=1000;
+
             c = a / b;
             System.out.println("C: "+c);
         }
@@ -38,6 +41,15 @@ public class ExceptionHandling
         finally {
             System.out.println("finally block");
         }
+
+
         System.out.println("End");
+        s1=null;
+        System.gc();
+
+    }
+    public void finalize()
+    {
+        System.out.println("Finalize");
     }
 }
