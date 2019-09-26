@@ -35,6 +35,9 @@ public class ExceptionHandling
             System.out.println(E.toString());
             System.out.println(E.getMessage());
         }
+        finally {
+            System.out.println("finally block");
+        }
         System.out.println("End");
     }
 }
